@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>title</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <ul class="nav nav-tabs" role="tablist">
+               <li role="presentation" class="active"><a href="#polling" aria-controls="polling" role="tab" data-toggle="tab">Pooling</a></li>
+               <li role="presentation"><a href="#longpolling" aria-controls="longpolling" role="tab" data-toggle="tab">Long Polling</a></li>
+               <li role="presentation"><a href="#websocket" aria-controls="websocket" role="tab" data-toggle="tab">WebSocket</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="polling">
+                    <h1>Polling</h1>
+                    <form>
+                        <button type="button" class="btn btn-success" name="start_poll">Start</button>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" rows="6" name="chat_poll"></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="message_poll"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" name="send_poll" type="button">Enviar</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="longpolling">
+                    <h1>Long Polling</h1>
+                    <form>
+                        <button type="button" class="btn btn-success" name="start_longpoll">Start</button>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" rows="6" name="chat_longpoll"></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="message_longpoll"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" name="send_longpoll" type="button">Enviar</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="websocket">
+                    <h1>WebSocket</h1>
+                    <form>
+                        <button type="button" class="btn btn-success" name="start_ws">Start</button>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" rows="6" name="chat_ws"></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="message_ws"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" name="send_ws" type="button">Enviar</button>
+                            </span>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script src="polling/polling.js"></script>
+        <script src="longpolling/longpolling.js"></script>
+        <script src="websocket/websocket.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
